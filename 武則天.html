@@ -1,0 +1,133 @@
+<html>
+<head>
+
+
+
+<style>
+
+/* https://www.w3schools.com/howto/howto_js_tabs.asp */
+/* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_tabs */
+
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  background-color: white;
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+</style>
+<style>
+body{
+  background-image: url("武則天照片.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+ h2{font-size: 36px}
+ p1{color: white;font-size: 18px}
+</style>
+<div id="pagetop" class="w3-bar w3-card-2 notranslate">
+  <a href="https://www.w3schools.com" class="w3-bar-item w3-button w3-hover-none w3-left w3-padding-16" title="Home" style="width:77px">
+    <i class="fa fa-logo ws-text-green ws-hover-text-green" style="position:relative;font-size:42px!important;"></i>
+  </a>
+
+</head>
+
+
+
+<body>
+
+<h2>武则天</h2>
+<p1>武则天是中国历史上知名度最高的女性之一，也是中国唯一一位女皇帝。武则天的一生跌宕起伏，充满了传奇色彩。</p1>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, '家庭')">家庭</button>
+  <button class="tablinks" onclick="openCity(event, '立后')">立后</button>
+  <button class="tablinks" onclick="openCity(event, '建国称帝')">建国称帝</button>
+  <button class="tablinks" onclick="openCity(event, '事迹')">事迹</button>
+  <button class="tablinks" onclick="openCity(event, '爱恨情仇')">爱恨情仇</button>
+</div>
+
+<div id="家庭" class="tabcontent">
+  <h3>家庭</h3>
+  <p>London is the capital city of England.</p>
+</div>
+
+<div id="立后" class="tabcontent">
+  <h3>立后</h3>
+  <p>Paris is the capital of France.</p> 
+</div>
+
+<div id="建国称帝" class="tabcontent">
+  <h3>建国称帝</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<div id="事迹" class="tabcontent">
+  <h3>事迹</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<div id="爱恨情仇" class="tabcontent">
+  <h3>爱恨情仇</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+   
+</body>
+</html>
